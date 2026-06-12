@@ -1,0 +1,24 @@
+{
+  "name": "sahil-group-website",
+  "version": "1.0.0",
+  "description": "Sahil Group Bangladesh - Official Website",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "knit",
+    "garment",
+    "manufacturer",
+    "bangladesh",
+    "sahil",
+    "group"
+  ],
+  "author": "Sahil Group",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

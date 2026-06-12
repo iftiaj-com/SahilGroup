@@ -1,0 +1,238 @@
+/* Global Styles for Sahil Group */
+
+:root {
+    --primary-color: #0F172A; /* Deep Navy - Professional */
+    --accent-color: #CCA43B; /* Muted Gold - Premium */
+    --text-dark: #334155;
+    --text-light: #64748B;
+    --bg-light: #F8FAFC;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.sg-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.sg-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.sg-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Responsive Layouts and Mobile Optimizations */
+@media (max-width: 992px) {
+    .sg-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .sg-grid-3, .sg-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Base heading scales */
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.85rem;
+        margin-bottom: 1.5rem;
+    }
+    h3 {
+        font-size: 1.35rem;
+    }
+    .section-padding {
+        padding: 50px 0;
+    }
+
+    /* Homepage Hero mobile optimizations to fix clipping and overlap */
+    .sg-hero {
+        min-height: calc(100vh - 80px) !important;
+        height: auto !important;
+        padding: 80px 0 60px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    .sg-hero h1 {
+        font-size: 2rem !important;
+        line-height: 1.3 !important;
+        letter-spacing: -0.5px !important;
+        margin-bottom: 1.2rem !important;
+    }
+    .sg-hero p {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 2rem !important;
+    }
+    .hero-badges {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        margin-bottom: 20px !important;
+    }
+    .badge-item {
+        padding: 4px 12px !important;
+        font-size: 0.75rem !important;
+    }
+    .hero-ctas {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px !important;
+    }
+
+    /* Inner Page Headers optimizations */
+    .page-header, .sg-hero-gallery, .sg-hero-contact {
+        min-height: 40vh !important;
+        padding: 60px 0 !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    .page-header h1, .sg-hero-gallery h1, .sg-hero-contact h1 {
+        font-size: 2rem !important;
+        margin-bottom: 8px !important;
+    }
+    .page-header p {
+        font-size: 1rem !important;
+    }
+
+    /* Image offset wrapper optimizations to prevent horizontal scroll */
+    .sg-image-wrapper::before {
+        bottom: -10px !important;
+        right: -10px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .sg-grid-3, .sg-grid-4 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Extra small screens hero adjustments */
+    .sg-hero h1 {
+        font-size: 1.75rem !important;
+    }
+}
+
+/* Horizontal Table Scrolling Support */
+.table-container, .sg-table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
