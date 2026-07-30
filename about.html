@@ -34,23 +34,59 @@
     <style>
         /* About Page Specific Styles - Simplified from original block styles */
         .page-header {
-            min-height: 60vh;
+            position: relative;
+            height: 70vh;
+            min-height: 520px;
+            overflow: hidden;
+            background: #0f172a;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.7) 100%), url('gallery/29.webp');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
+        }
+
+        .page-header iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw;
+            min-height: 70vh;
+            min-width: 124.44vh;
+            transform: translate(-50%, -50%);
+            border: none;
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .page-header .header-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(15, 23, 42, 0.45);
             text-align: center;
+            animation: fadeOutTitle 1s ease 3s forwards;
+            pointer-events: none;
+        }
+
+        @keyframes fadeOutTitle {
+            0% {
+                opacity: 1;
+                visibility: visible;
+            }
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
         }
 
         .page-header h1 {
             color: white;
             font-size: 3.5rem;
             margin-bottom: 15px;
-            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
         }
 
         .page-header p {
@@ -60,7 +96,7 @@
             letter-spacing: 3px;
             text-transform: uppercase;
             margin: 0;
-            opacity: 0.9;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
         }
 
         .sg-accent-line {
@@ -225,9 +261,12 @@
     <app-header></app-header>
 
     <div class="page-header">
-        <div class="container">
-            <h1>Sahil Group</h1>
-            <p>Composite Textile &amp; Apparel Excellence</p>
+        <iframe src="https://www.youtube.com/embed/t213PyG0Ffg?autoplay=1&mute=1&loop=1&playlist=t213PyG0Ffg" title="Sahil Group Bangladesh 2024 - Textile Manufacturing Portfolio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="header-overlay">
+            <div class="container">
+                <h1>Sahil Group</h1>
+                <p>Composite Textile &amp; Apparel Excellence</p>
+            </div>
         </div>
     </div>
 
