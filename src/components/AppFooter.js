@@ -171,7 +171,7 @@ export class AppFooter extends HTMLElement {
                                 <span>
                                     <a href="mailto:sahilgroup@hotmail.com">sahilgroup@hotmail.com</a>
                                     <a href="mailto:nazrulsahilgroup@gmail.com" style="display: block; margin: 5px 0;">nazrulsahilgroup@gmail.com</a>
-                                    <a href="mailto:sahil.phis@gmail.com">sahil.phis@gmail.com</a>
+                                    <a href="mailto:kazisahilgroup@gmail.com">kazisahilgroup@gmail.com</a>
                                 </span>
                             </li>
                         </ul>

@@ -54,7 +54,7 @@ export default {
         const emailPayload = {
           from: formattedFrom,
           to: ['sahilgroup@hotmail.com'],
-          cc: ['nazrulsahilgroup@gmail.com', 'sahil.phis@gmail.com'],
+          cc: ['nazrulsahilgroup@gmail.com', 'kazisahilgroup@gmail.com'],
           reply_to: email,
           subject: `[Website Inquiry] ${subject}`,
           html: `

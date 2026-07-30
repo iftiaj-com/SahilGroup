@@ -37,6 +37,7 @@ export class AppHeader extends HTMLElement {
             .sg-nav-links {
                 display: flex;
                 gap: 30px;
+                align-items: center;
             }
 
             .sg-nav-links a {
@@ -44,11 +45,16 @@ export class AppHeader extends HTMLElement {
                 font-weight: 500;
                 font-size: 15px;
                 text-transform: uppercase;
+                transition: color 0.3s ease;
             }
 
             .sg-nav-links a:hover,
             .sg-nav-links a.active {
                 color: var(--accent-color);
+            }
+
+            .sg-nav-links a.nav-social-link {
+                font-size: 17px;
             }
 
             .mobile-menu-btn {
@@ -138,6 +144,8 @@ export class AppHeader extends HTMLElement {
                     <a href="finishing.html" id="link-finishing">Finishing</a>
                     <a href="gallery.html" id="link-gallery">Gallery</a>
                     <a href="contact.html" id="link-contact">Contact</a>
+                    <a href="https://www.facebook.com/kazinazrul.islam.73" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="nav-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@SahilGroupBD" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="nav-social-link"><i class="fab fa-youtube"></i></a>
                 </nav>
                 <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
             </div>
